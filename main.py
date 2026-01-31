@@ -1,24 +1,38 @@
 print ("привет, приветствую вас на игре 'Победи миллион'!")
 questions = [
     "Кто открыл электричество?",
-    "Кто был первым президентом Америки"
+    "Кто был первым президентом Америки",
+    "Кто создал игру FNAF"
 ]
-print(questions[1])
+
 
 answers = [
     ["Бенджамин Франклин", "Томас Эдисон", "Никола Тесла", "Альберт Эйнштейн"],
-    ["Дональд Трамп", "Джордж Вашингтон", "Пейтон Рэндольф", "Джефферсон Дэвис"]
+    ["Дональд Трамп", "Джордж Вашингтон", "Пейтон Рэндольф", "Джефферсон Дэвис"],
+    ["Кейчиро Тояма", "Хидео Кодзима", "Синдзи Миками", "Скот Коутон"]
 ]
 
 right_answers = [
     "1",
-    "2"
+    "2",
+    "4"
     ]
-for print(questions[1])i in range(1, len(answers)+1):
-    print(f"{i}. {answers[i-1]}")
+
+for j in range(len(questions)):
+    print(questions[j])
+
+    for i in range(len(answers[j])):
+        print(f"{i+1}. {answers[j][i]}")
 
 
-user_answer = input("ведите ответ:")
-if  user_answer==right_answers:
-    print("Верно!")
+    user_answer = input("ведите ответ:")
+    if  user_answer==right_answers[j]:
+        print("Верно!")
+    else:
+        print("Неверно!")
+ 
+print("Спасибо за игру!")
+
+
+
 
